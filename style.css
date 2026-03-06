@@ -10,10 +10,10 @@
   box-sizing:border-box;
 }
 
-html, body{
+html,body{
   height:100%;
   margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--text);
 }
 
@@ -23,35 +23,32 @@ html, body{
   grid-template-columns: var(--panel-w) 1fr;
 }
 
-/* Linke Spalte */
+/* PANEL */
 
 .panel{
   padding:18px;
   background:linear-gradient(180deg,#cfe0ea,#d9e7ef);
   border-right:1px solid var(--stroke);
-  overflow-y:auto;
 }
+
+/* TITLE */
 
 .brand{
   display:flex;
   gap:12px;
-  align-items:flex-start;
   margin-bottom:18px;
 }
 
 .brand-mark{
   font-size:34px;
-  line-height:1;
 }
 
 .brand-title{
   font-size:28px;
   font-weight:900;
-  line-height:1.05;
-  letter-spacing:.2px;
 }
 
-/* Suche */
+/* SEARCH */
 
 .search{
   margin-bottom:16px;
@@ -61,129 +58,83 @@ html, body{
 
 .search-row{
   display:flex;
-  align-items:center;
   gap:10px;
-  background:#fff;
-  border:1px solid var(--stroke);
+  background:white;
   border-radius:16px;
   padding:10px 12px;
 }
 
-.search-row .icon{
-  opacity:.75;
-  font-size:18px;
-}
-
 .search-row input{
   flex:1;
-  min-width:0;
   border:0;
   outline:0;
-  background:transparent;
   font-size:15px;
 }
 
 .search-row button{
   border:0;
   background:#16233a;
-  color:#fff;
+  color:white;
   padding:10px 14px;
   border-radius:14px;
   font-weight:700;
-  font-size:14px;
-  cursor:pointer;
 }
 
-.results{
-  margin-top:8px;
-  background:#fff;
-  border:1px solid var(--stroke);
-  border-radius:14px;
-  overflow:hidden;
-}
-
-.result-item{
-  padding:10px 12px;
-  border-top:1px solid rgba(0,0,0,.06);
-  font-size:14px;
-  cursor:pointer;
-}
-
-.result-item:first-child{
-  border-top:0;
-}
-
-.result-item:hover{
-  background:rgba(0,0,0,.04);
-}
-
-/* Weiße Box */
+/* CARD */
 
 .card{
-  margin-top:10px;
   background:var(--card);
-  border:1px solid var(--stroke);
   border-radius:22px;
   padding:18px;
+  margin-top:10px;
   box-shadow:0 10px 25px rgba(0,0,0,.06);
-  overflow:hidden;
 }
 
 .card-title{
-  margin:0 0 10px 0;
   font-size:42px;
   font-weight:900;
-  line-height:1.0;
-  letter-spacing:.2px;
+  margin-bottom:10px;
 }
+
+/* CONTENT */
 
 .card-body{
   display:grid;
-  grid-template-columns: 1fr 210px;
-  gap:10px;
+  grid-template-columns: 1fr 320px; /* großer Bildbereich */
   align-items:end;
+  gap:10px;
 }
 
-.availability{
-  align-self:end;
-  padding-bottom:6px;
-}
+/* TEXT */
 
 .availability-label{
   font-size:18px;
   color:var(--muted);
-  margin-bottom:6px;
 }
 
 .availability-value{
   font-size:34px;
   font-weight:900;
-  line-height:1.08;
 }
 
-/* Bild rechts in der Box */
+/* IMAGE */
 
 .device-float{
   display:flex;
   justify-content:center;
   align-items:flex-end;
-  min-height:240px;
 }
 
 .device-img{
   width:100%;
-  max-width:210px;
-  max-height:300px;
+  max-width:320px; /* doppelt so groß */
   height:auto;
-  object-fit:contain;
-  display:block;
 
   transform:rotate(-10deg);
-  transform-origin:center bottom;
-  filter:drop-shadow(0 16px 26px rgba(0,0,0,.22));
+  filter:drop-shadow(0 18px 28px rgba(0,0,0,.25));
 }
 
-/* Buttons */
+/* BUTTONS */
 
 .actions{
   display:flex;
@@ -193,11 +144,9 @@ html, body{
 
 .actions button{
   border:1px solid var(--stroke);
-  background:#fff;
+  background:white;
   padding:10px 14px;
   border-radius:14px;
-  font-size:14px;
-  cursor:pointer;
 }
 
 .actions .secondary{
@@ -207,15 +156,10 @@ html, body{
 .footer{
   margin-top:14px;
   font-size:12px;
-  line-height:1.35;
   color:var(--muted);
 }
 
-/* Karte */
-
-.mapwrap{
-  position:relative;
-}
+/* MAP */
 
 #map{
   width:100%;
