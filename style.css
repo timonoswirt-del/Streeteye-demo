@@ -165,8 +165,8 @@ html, body{
 
 .device-img{
   width:100%;
-  max-width:260px;   /* vorher 145px */
-  max-height:360px;  /* vorher 220px */
+  max-width:260px;   /
+  max-height:360px;  /
   height:auto;
   object-fit:contain;
   display:block;
@@ -209,4 +209,5 @@ html, body{
   width:100%;
   height:100vh;
 }
+
 
