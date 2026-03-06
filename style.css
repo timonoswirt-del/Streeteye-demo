@@ -1,5 +1,5 @@
 :root{
-  --panel-w: 520px; /* breitere linke Spalte */
+  --panel-w: 520px;
   --text: #0f213a;
   --muted: #5b6875;
   --card: rgba(255,255,255,.94);
@@ -10,7 +10,7 @@
   box-sizing:border-box;
 }
 
-html, body{
+html,body{
   height:100%;
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
@@ -23,16 +23,15 @@ html, body{
   grid-template-columns: var(--panel-w) 1fr;
 }
 
-/* LINKER BEREICH */
+/* PANEL */
 
 .panel{
-  padding:20px;
+  padding:22px;
   background:linear-gradient(180deg,#cfe0ea,#d9e7ef);
   border-right:1px solid var(--stroke);
-  overflow-y:auto;
 }
 
-/* TITEL */
+/* HEADER */
 
 .brand{
   display:flex;
@@ -47,12 +46,13 @@ html, body{
 .brand-title{
   font-size:28px;
   font-weight:900;
+  line-height:1.05;
 }
 
-/* SUCHFELD */
+/* SEARCH */
 
 .search{
-  margin-bottom:16px;
+  margin-bottom:18px;
   padding-bottom:14px;
   border-bottom:1px solid rgba(0,0,0,.08);
 }
@@ -86,29 +86,29 @@ html, body{
 .card{
   position:relative;
   background:var(--card);
-  border-radius:24px;
-  padding:22px;
+  border-radius:26px;
+  padding:26px;
   margin-top:12px;
-  min-height:380px;
-  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  min-height:420px;
+  box-shadow:0 12px 30px rgba(0,0,0,.06);
 }
 
-/* ÜBERSCHRIFT */
+/* TITEL */
 
 .card-title{
-  font-size:46px;
+  font-size:48px;
   font-weight:900;
   line-height:1.0;
-  width:60%;
+  width:58%;
 }
 
-/* TEXT LINKS UNTEN */
+/* TEXT LINKS */
 
 .availability{
   position:absolute;
-  left:22px;
-  bottom:22px;
-  width:55%;
+  left:26px;
+  bottom:26px;
+  width:52%;
 }
 
 .availability-label{
@@ -117,18 +117,19 @@ html, body{
 }
 
 .availability-value{
-  font-size:36px;
+  font-size:38px;
   font-weight:900;
   line-height:1.1;
 }
 
-/* STREETEYE BILD */
+/* STREETEYE */
 
 .device-float{
   position:absolute;
   right:20px;
   bottom:20px;
-  width:300px; /* deutlich größer */
+  width:50%;        /* nutzt halbe Box */
+  max-width:360px;  /* maximale Größe */
 }
 
 .device-img{
@@ -136,7 +137,9 @@ html, body{
   height:auto;
 
   transform:rotate(-10deg);
-  filter:drop-shadow(0 20px 30px rgba(0,0,0,.28));
+  transform-origin:center bottom;
+
+  filter:drop-shadow(0 20px 32px rgba(0,0,0,.28));
 }
 
 /* BUTTONS */
@@ -152,14 +155,11 @@ html, body{
   background:white;
   padding:10px 16px;
   border-radius:16px;
-  font-size:14px;
 }
 
 .actions .secondary{
   background:rgba(255,255,255,.6);
 }
-
-/* FOOTER */
 
 .footer{
   margin-top:14px;
@@ -167,7 +167,7 @@ html, body{
   color:var(--muted);
 }
 
-/* KARTE */
+/* MAP */
 
 .mapwrap{
   position:relative;
