@@ -120,34 +120,36 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 
 .mapwrap{ position:relative; }
 #map{ height:100vh; width:100%; }
-/* Größere Überschrift */
+/* +50% Größen-Override */
+
+/* Titel "STREETEYE GEN 01" */
 .card-title{
-  font-size: 30px;      /* vorher ~22px */
+  font-size: 45px;      /* +50% von 30px */
   font-weight: 900;
+  line-height: 1.05;
 }
 
-/* "Derzeit" größer */
+/* "Derzeit" */
 .availability-label{
-  font-size: 16px;      /* vorher Standard */
+  font-size: 24px;      /* gut lesbar */
 }
 
-/* "27 Geräte verfügbar!" deutlich größer */
+/* "27 Geräte verfügbar!" */
 .availability-value{
-  font-size: 28px;      /* vorher 20px */
+  font-size: 42px;      /* +50% von 28px */
   font-weight: 900;
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
-/* Bild ca. doppelt so groß */
+/* Bild: +50% */
 .device-float{
-  height: 320px;        /* vorher 160px */
+  height: 480px;        /* +50% von 320px */
 }
 
 .device-img{
-  max-height: 320px;    /* vorher 160px */
-  max-width: 360px;     /* vorher 180px */
+  max-height: 480px;    /* +50% von 320px */
+  max-width: 540px;     /* +50% von 360px */
 }
-
 
 
 
