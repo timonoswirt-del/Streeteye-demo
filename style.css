@@ -67,20 +67,19 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 .result-item:hover{ background: rgba(0,0,0,.04); }
 
 /* ===== Card (Box) ===== */
-.card{
-  margin-top: 10px;
-  background: var(--card);
-  border: 1px solid var(--stroke);
-  border-radius: 18px;
-  padding: 16px 16px 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.06);
-  position: relative;
 
   /* Platz reservieren, damit Availability unten NICHT vom Bild überdeckt wird */
   padding-bottom: 150px;
   min-height: 360px;
 }
-
+.card{
+  margin-top: 10px;
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.06);
+}
 .card-title{
   font-weight: 900;
   font-size: 44px;
@@ -121,10 +120,7 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 
 /* Availability unten links fix in der Box */
 .availability{
-  position: absolute;
-  left: 16px;
-  bottom: 18px;
-  width: 52%;            /* damit es wie im Screenshot links bleibt */
+  margin-top: 10px;
 }
 
 .availability-label{
@@ -155,3 +151,4 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 
 .mapwrap{ position:relative; }
 #map{ height:100vh; width:100%; }
+
