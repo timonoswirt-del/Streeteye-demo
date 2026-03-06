@@ -1,19 +1,19 @@
 :root{
   --panel-w: 420px;
-  --text: #142033;
+  --text: #0f213a;
   --muted: #5b6875;
-  --card: rgba(255,255,255,.88);
-  --stroke: rgba(0,0,0,.10);
+  --card: rgba(255,255,255,.9);
+  --stroke: rgba(0,0,0,.08);
 }
 
 *{
   box-sizing:border-box;
 }
 
-html, body{
+html,body{
   height:100%;
   margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--text);
 }
 
@@ -23,36 +23,35 @@ html, body{
   grid-template-columns: var(--panel-w) 1fr;
 }
 
+/* LEFT PANEL */
+
 .panel{
-  padding:16px;
-  background: linear-gradient(180deg, #cfe0ea 0%, #d9e7ef 100%);
+  padding:18px;
+  background:linear-gradient(180deg,#cfe0ea,#d9e7ef);
   border-right:1px solid var(--stroke);
-  overflow-y:auto;
 }
 
 .brand{
   display:flex;
-  align-items:flex-start;
   gap:12px;
   margin-bottom:18px;
 }
 
 .brand-mark{
   font-size:34px;
-  line-height:1;
-  margin-top:2px;
 }
 
 .brand-title{
   font-size:28px;
   font-weight:900;
   line-height:1.05;
-  letter-spacing:.2px;
 }
 
+/* SEARCH */
+
 .search{
-  margin:0 0 14px 0;
-  padding-bottom:12px;
+  margin-bottom:16px;
+  padding-bottom:14px;
   border-bottom:1px solid rgba(0,0,0,.08);
 }
 
@@ -60,117 +59,82 @@ html, body{
   display:flex;
   align-items:center;
   gap:10px;
-  background:rgba(255,255,255,.72);
-  border:1px solid var(--stroke);
+  background:white;
   border-radius:16px;
   padding:10px 12px;
-}
-
-.search-row .icon{
-  opacity:.7;
-  font-size:18px;
 }
 
 .search-row input{
   flex:1;
   border:0;
   outline:0;
-  background:transparent;
   font-size:15px;
-  min-width:0;
 }
 
 .search-row button{
   border:0;
-  border-radius:14px;
   background:#16233a;
-  color:#fff;
-  padding:11px 14px;
-  font-size:14px;
+  color:white;
+  padding:10px 14px;
+  border-radius:14px;
   font-weight:700;
   cursor:pointer;
 }
 
-.results{
-  margin-top:8px;
-  background:rgba(255,255,255,.72);
-  border:1px solid var(--stroke);
-  border-radius:14px;
-  overflow:hidden;
-}
-
-.result-item{
-  padding:10px 12px;
-  font-size:14px;
-  cursor:pointer;
-  border-top:1px solid rgba(0,0,0,.06);
-}
-
-.result-item:first-child{
-  border-top:0;
-}
-
-.result-item:hover{
-  background:rgba(0,0,0,.04);
-}
-
 /* CARD */
+
 .card{
-  margin-top:8px;
   background:var(--card);
-  border:1px solid var(--stroke);
   border-radius:22px;
-  padding:16px 16px 14px 16px;
-  box-shadow:0 10px 25px rgba(0,0,0,.05);
+  padding:18px;
+  margin-top:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
 }
 
 .card-title{
-  margin:0 0 8px 0;
-  font-size:40px;
+  font-size:42px;
   font-weight:900;
-  line-height:0.98;
-  letter-spacing:.2px;
+  margin-bottom:10px;
+  line-height:1;
 }
 
-.card-body.card-body-split{
+.card-body{
   display:grid;
-  grid-template-columns: 1fr 520px;
-  gap:8px;
+  grid-template-columns: 1fr 1fr;
   align-items:end;
 }
-.availability{
-  align-self:end;
-  padding-bottom:4px;
-}
+
+/* TEXT */
 
 .availability-label{
   font-size:18px;
   color:var(--muted);
-  margin-bottom:6px;
 }
 
 .availability-value{
-  font-size:30px;
+  font-size:34px;
   font-weight:900;
-  line-height:1.05;
-  word-break:normal;
+  line-height:1.1;
 }
+
+/* IMAGE */
+
 .device-float{
   display:flex;
-  justify-content:center;   /* statt flex-end */
+  justify-content:flex-end;
   align-items:flex-end;
 }
 
 .device-img{
-  width:140%;
-  max-width:520px;
+  width:100%;
+  max-width:300px;
   height:auto;
-  object-fit:contain;
-  display:block;
 
-  transform:rotate(-10deg) translateX(-60px);
-  filter:drop-shadow(0 18px 28px rgba(0,0,0,.25));
+  transform:rotate(-10deg);
+  filter:drop-shadow(0 16px 24px rgba(0,0,0,.25));
 }
+
+/* BUTTONS */
 
 .actions{
   display:flex;
@@ -180,23 +144,23 @@ html, body{
 
 .actions button{
   border:1px solid var(--stroke);
-  background:#fff;
+  background:white;
   padding:10px 14px;
   border-radius:14px;
   cursor:pointer;
-  font-size:14px;
 }
 
 .actions .secondary{
-  background:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.6);
 }
 
 .footer{
   margin-top:14px;
   font-size:12px;
   color:var(--muted);
-  line-height:1.35;
 }
+
+/* MAP */
 
 .mapwrap{
   position:relative;
@@ -206,12 +170,3 @@ html, body{
   width:100%;
   height:100vh;
 }
-
-
-
-
-
-
-
-
-
