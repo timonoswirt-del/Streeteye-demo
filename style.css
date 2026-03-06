@@ -83,6 +83,12 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
   display:flex; align-items:center; justify-content:center;
   background: rgba(255,255,255,.55);
 }
+.device-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 .device-placeholder{ font-size:12px; color:var(--muted); }
 
 .availability-label{ color:var(--muted); }
@@ -103,3 +109,4 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 
 .mapwrap{ position:relative; }
 #map{ height:100vh; width:100%; }
+
