@@ -118,7 +118,7 @@ html,body{
 
 .device-float{
   position: absolute;
-  right: 80px;   /* weiter nach rechts */
+  right: 220px;   /* weiter nach rechts */
   bottom: 28px;
 }
 .device-img{
@@ -157,5 +157,6 @@ html,body{
   width:100%;
   height:100vh;
 }
+
 
 
