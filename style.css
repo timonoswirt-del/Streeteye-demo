@@ -126,22 +126,20 @@ html,body{
 
 .device-float{
   position:absolute;
-  right:20px;
-  bottom:20px;
-  width:50%;        /* nutzt halbe Box */
-  max-width:360px;  /* maximale Größe */
+  right:40px;
+  bottom:30px;
+  width:300px;
 }
 
 .device-img{
   width:100%;
   height:auto;
 
-  transform:rotate(-10deg);
-  transform-origin:center bottom;
+  transform: scale(3) rotate(-10deg);
+  transform-origin: bottom right;
 
-  filter:drop-shadow(0 20px 32px rgba(0,0,0,.28));
+  filter:drop-shadow(0 22px 34px rgba(0,0,0,.32));
 }
-
 /* BUTTONS */
 
 .actions{
@@ -177,3 +175,4 @@ html,body{
   width:100%;
   height:100vh;
 }
+
