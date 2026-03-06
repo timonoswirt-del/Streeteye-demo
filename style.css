@@ -150,6 +150,21 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
   max-height: 480px;    /* +50% von 320px */
   max-width: 540px;     /* +50% von 360px */
 }
+/* Weniger Abstand: Überschrift -> Inhalt */
+.card-title{
+  margin-bottom: 6px;   /* vorher 10px */
+}
+
+/* Inhalt näher an die Überschrift */
+.card{
+  padding-top: 10px;    /* vorher 14px */
+}
+
+/* Weniger Abstand zwischen Textblock und Bild */
+.card-body-split{
+  gap: 8px;             /* vorher 14px */
+  align-items: center;  /* statt 'end' – wirkt kompakter */
+}
 
 
 
