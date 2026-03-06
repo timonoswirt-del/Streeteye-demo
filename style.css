@@ -25,7 +25,7 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 .brand-mark{ font-size:34px; line-height:1; }
 .brand-title{ font-weight:800; letter-spacing:.6px; font-size:26px; }
 
-.search{ margin: 6px 0 18px; }
+.search{ margin: 6px 0 14px; }
 .search-row{
   display:flex; gap:10px; align-items:center;
   background: rgba(255,255,255,.7);
@@ -66,45 +66,80 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 .result-item:first-child{ border-top:0; }
 .result-item:hover{ background: rgba(0,0,0,.04); }
 
+/* ===== Card (Box) ===== */
 .card{
   margin-top: 10px;
   background: var(--card);
   border: 1px solid var(--stroke);
   border-radius: 18px;
-  padding: 14px;
+  padding: 16px 16px 18px;
   box-shadow: 0 10px 25px rgba(0,0,0,.06);
-}
-.card-title{ font-weight:800; font-size:22px; margin-bottom:10px; }
-.card-body{ display:flex; gap:14px; align-items:center; }
+  position: relative;
 
+  /* Platz reservieren, damit Availability unten NICHT vom Bild überdeckt wird */
+  padding-bottom: 150px;
+  min-height: 360px;
+}
+
+.card-title{
+  font-weight: 900;
+  font-size: 44px;
+  letter-spacing: .4px;
+  line-height: 1.0;
+  margin: 0 0 6px 0;   /* kleiner Abstand zur "Bildzeile" */
+}
+
+/* In der Card gibt es nur das Bild-Element in der normalen Flussrichtung.
+   Die Availability wird unten fix positioniert. */
 .card-body-split{
-  display: grid;
-  grid-template-columns: 1fr 180px; /* rechts Platz fürs Bild */
-  gap: 14px;
-  align-items: end;               /* Bild unten an der Box ausrichten */
+  display:flex;
+  justify-content: flex-end; /* Bild nach rechts */
+  margin-top: 0;
 }
 
+/* Bildbereich rechts, direkt unter der Überschrift */
 .device-float{
-  height: 160px;                  /* “max doppelt so hoch” – anpassbar */
+  width: 58%;
   display:flex;
-  align-items:flex-end;
-  justify-content:center;
+  justify-content:flex-end;
+  align-items:flex-start; /* wichtig: Bild oben starten -> weniger Leerraum */
+  padding-top: 2px;
 }
 
 .device-img{
-  max-height: 160px;
-  max-width: 180px;
+  max-width: 100%;
+  max-height: 330px;
   width: auto;
   height: auto;
   object-fit: contain;
   display:block;
+
+  /* optional: leichtes „Produkt“-Feeling */
+  transform: rotate(-10deg);
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.18));
 }
 
-.device-placeholder{ font-size:12px; color:var(--muted); }
+/* Availability unten links fix in der Box */
+.availability{
+  position: absolute;
+  left: 16px;
+  bottom: 18px;
+  width: 52%;            /* damit es wie im Screenshot links bleibt */
+}
 
-.availability-label{ color:var(--muted); }
-.availability-value{ font-size:20px; font-weight:800; margin-top:2px; }
+.availability-label{
+  color: var(--muted);
+  font-size: 22px;
+  margin-bottom: 6px;
+}
 
+.availability-value{
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+/* ===== Buttons / Footer ===== */
 .actions{ display:flex; gap:10px; margin-top:14px; }
 .actions button{
   border: 1px solid var(--stroke);
@@ -120,52 +155,3 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 
 .mapwrap{ position:relative; }
 #map{ height:100vh; width:100%; }
-/* +50% Größen-Override */
-
-/* Titel "STREETEYE GEN 01" */
-.card-title{
-  font-size: 45px;      /* +50% von 30px */
-  font-weight: 900;
-  line-height: 1.05;
-}
-
-/* "Derzeit" */
-.availability-label{
-  font-size: 24px;      /* gut lesbar */
-}
-
-/* "27 Geräte verfügbar!" */
-.availability-value{
-  font-size: 42px;      /* +50% von 28px */
-  font-weight: 900;
-  line-height: 1.1;
-}
-
-/* Bild: +50% */
-.device-float{
-  height: 480px;        /* +50% von 320px */
-}
-
-.device-img{
-  max-height: 480px;    /* +50% von 320px */
-  max-width: 540px;     /* +50% von 360px */
-}
-/* Weniger Abstand: Überschrift -> Inhalt */
-.card-title{
-  margin-bottom: 2px;   /
-}
-
-/* Inhalt näher an die Überschrift */
-.card{
-  padding-top: 10px;    /* vorher 14px */
-}
-
-/* Weniger Abstand zwischen Textblock und Bild */
-.card-body-split{
-  gap: 6px;             /
-  align-items: center;  /* statt 'end' – wirkt kompakter */
-}
-
-
-
-
