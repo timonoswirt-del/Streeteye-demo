@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Streeteye Sharing – Plattform (Demo)</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="panel">
+      <div class="brand">
+        <div class="brand-mark">👁️</div>
+        <div class="brand-title">STREETEYE SHARING –<br/>PLATTFORM</div>
+      </div>
+
+      <div class="search">
+        <div class="search-row">
+          <span class="icon">🔎</span>
+          <input id="searchInput" type="text" placeholder="Wo wollen Sie zählen?" autocomplete="off" />
+          <button id="searchBtn" type="button">Suchen</button>
+        </div>
+        <div id="results" class="results" aria-live="polite"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">STREETEYE GEN 01</div>
+        <div class="card-body">
+          <div class="device-box">
+            <div class="device-placeholder">Gerätebild</div>
+          </div>
+          <div class="availability">
+            <div class="availability-label">Derzeit</div>
+            <div class="availability-value"><span id="availableCount">–</span> Geräte verfügbar!</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="tourBtn" type="button">Kamerafahrt (Demo)</button>
+        <button id="resetBtn" type="button" class="secondary">Reset</button>
+      </div>
+
+      <div class="footer">Für Videoaufnahme: Browser-Vollbild + Screenrecording.</div>
+    </aside>
+
+    <main class="mapwrap">
+      <div id="map"></div>
+    </main>
+  </div>
+</body>
+</html>
