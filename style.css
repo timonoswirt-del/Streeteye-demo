@@ -152,7 +152,7 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 }
 /* Weniger Abstand: Überschrift -> Inhalt */
 .card-title{
-  margin-bottom: 6px;   /* vorher 10px */
+  margin-bottom: 2px;   /
 }
 
 /* Inhalt näher an die Überschrift */
@@ -162,9 +162,10 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 
 /* Weniger Abstand zwischen Textblock und Bild */
 .card-body-split{
-  gap: 8px;             /* vorher 14px */
+  gap: 6px;             /
   align-items: center;  /* statt 'end' – wirkt kompakter */
 }
+
 
 
 
