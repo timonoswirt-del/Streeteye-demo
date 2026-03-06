@@ -120,6 +120,34 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 
 .mapwrap{ position:relative; }
 #map{ height:100vh; width:100%; }
+/* Größere Überschrift */
+.card-title{
+  font-size: 30px;      /* vorher ~22px */
+  font-weight: 900;
+}
+
+/* "Derzeit" größer */
+.availability-label{
+  font-size: 16px;      /* vorher Standard */
+}
+
+/* "27 Geräte verfügbar!" deutlich größer */
+.availability-value{
+  font-size: 28px;      /* vorher 20px */
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+/* Bild ca. doppelt so groß */
+.device-float{
+  height: 320px;        /* vorher 160px */
+}
+
+.device-img{
+  max-height: 320px;    /* vorher 160px */
+  max-width: 360px;     /* vorher 180px */
+}
+
 
 
 
