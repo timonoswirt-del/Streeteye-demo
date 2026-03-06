@@ -1,5 +1,5 @@
 :root{
-  --panel-w: 600px; /* breiter linker Bereich */
+  --panel-w: 600px;
   --text:#0f213a;
   --muted:#5b6875;
   --card:#ffffff;
@@ -22,14 +22,14 @@ html,body{
   grid-template-columns: var(--panel-w) 1fr;
 }
 
-/* LINKER BEREICH */
+/* PANEL */
 
 .panel{
   padding:24px;
   background:linear-gradient(180deg,#cfe0ea,#d9e7ef);
 }
 
-/* TITEL */
+/* HEADER */
 
 .brand{
   display:flex;
@@ -46,7 +46,7 @@ html,body{
   font-weight:900;
 }
 
-/* SUCHE */
+/* SEARCH */
 
 .search{
   margin-bottom:22px;
@@ -77,33 +77,32 @@ html,body{
   font-weight:700;
 }
 
-/* WEISSE BOX */
+/* CARD */
 
 .card{
+  position:relative;
   background:var(--card);
   border-radius:28px;
   padding:28px;
   margin-top:10px;
   box-shadow:0 14px 35px rgba(0,0,0,.08);
+  overflow:hidden;
 }
 
-/* ÜBERSCHRIFT */
+/* TITLE */
 
 .card-title{
   font-size:54px;
   font-weight:900;
   margin-bottom:18px;
-}
-
-/* INHALT */
-
-.card-body{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  align-items:end;
+  width:60%;
 }
 
 /* TEXT */
+
+.availability{
+  width:55%;
+}
 
 .availability-label{
   font-size:24px;
@@ -115,17 +114,16 @@ html,body{
   font-weight:900;
 }
 
-/* BILD */
+/* IMAGE POSITION */
 
 .device-float{
-  display:flex;
-  justify-content:flex-end;
-  align-items:flex-end;
+  position:absolute;
+  right:40px;     /* verschiebt Bild nach rechts */
+  bottom:30px;
 }
 
 .device-img{
-  width:100%;
-  max-width:420px; /* großes Bild */
+  width:420px;    /* Größe bleibt gleich */
   height:auto;
 
   transform:rotate(-10deg);
@@ -154,7 +152,7 @@ html,body{
   color:var(--muted);
 }
 
-/* KARTE */
+/* MAP */
 
 #map{
   width:100%;
