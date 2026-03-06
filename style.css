@@ -77,25 +77,29 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 .card-title{ font-weight:800; font-size:22px; margin-bottom:10px; }
 .card-body{ display:flex; gap:14px; align-items:center; }
 
-.device-box{
-  width: 100%;
-  max-width: 220px;     /* optional: begrenzt die Breite */
-  height: 160px;        /* <-- ca. doppelt so hoch wie die weiße Box */
-  border-radius: 14px;
-  border: 1px dashed rgba(0,0,0,.25);
+.card-body-split{
+  display: grid;
+  grid-template-columns: 1fr 180px; /* rechts Platz fürs Bild */
+  gap: 14px;
+  align-items: end;               /* Bild unten an der Box ausrichten */
+}
+
+.device-float{
+  height: 160px;                  /* “max doppelt so hoch” – anpassbar */
   display:flex;
-  align-items:center;
+  align-items:flex-end;
   justify-content:center;
-  background: rgba(255,255,255,.55);
-  overflow: hidden;     /* wichtig: nichts ragt raus */
 }
 
 .device-img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;  /* skaliert ohne Zuschneiden */
-  display: block;
+  max-height: 160px;
+  max-width: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display:block;
 }
+
 .device-placeholder{ font-size:12px; color:var(--muted); }
 
 .availability-label{ color:var(--muted); }
@@ -116,5 +120,6 @@ html,body{ height:100%; margin:0; font-family: system-ui, -apple-system, Segoe U
 
 .mapwrap{ position:relative; }
 #map{ height:100vh; width:100%; }
+
 
 
