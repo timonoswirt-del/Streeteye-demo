@@ -78,16 +78,16 @@ html,body{
 }
 
 /* CARD */
-
 .card{
-  position:relative;
-  background:var(--card);
-  border-radius:28px;
-  padding:28px;
-  margin-top:10px;
-  box-shadow:0 14px 35px rgba(0,0,0,.08);
-  overflow:hidden;
+  position: relative;
+  background: var(--card);
+  border-radius: 28px;
+  padding: 28px;
+  margin-top: 10px;
+  box-shadow: 0 14px 35px rgba(0,0,0,.08);
+  overflow: hidden;
 }
+
 
 /* TITLE */
 
@@ -117,11 +117,10 @@ html,body{
 /* IMAGE POSITION */
 
 .device-float{
-  position:absolute;
-  right:40px;     /* verschiebt Bild nach rechts */
-  bottom:30px;
+  position: absolute;
+  right: 55px;   /* weiter nach rechts */
+  bottom: 28px;
 }
-
 .device-img{
   width:420px;    /* Größe bleibt gleich */
   height:auto;
@@ -158,3 +157,4 @@ html,body{
   width:100%;
   height:100vh;
 }
+
