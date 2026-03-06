@@ -23,7 +23,7 @@ html,body{
   grid-template-columns: var(--panel-w) 1fr;
 }
 
-/* LEFT PANEL */
+/* PANEL */
 
 .panel{
   padding:18px;
@@ -89,6 +89,7 @@ html,body{
   padding:18px;
   margin-top:10px;
   box-shadow:0 10px 25px rgba(0,0,0,.06);
+  overflow:hidden; /* hält Bild in der Box */
 }
 
 .card-title{
@@ -98,10 +99,13 @@ html,body{
   line-height:1;
 }
 
+/* CARD BODY */
+
 .card-body{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 180px;
   align-items:end;
+  gap:10px;
 }
 
 /* TEXT */
@@ -121,16 +125,21 @@ html,body{
 
 .device-float{
   display:flex;
-  justify-content:flex-end;
+  justify-content:center;
   align-items:flex-end;
+  width:180px;
 }
 
 .device-img{
   width:100%;
-  max-width:300px;
+  max-width:170px;
   height:auto;
+  object-fit:contain;
+  display:block;
 
   transform:rotate(-10deg);
+  transform-origin:center bottom;
+
   filter:drop-shadow(0 16px 24px rgba(0,0,0,.25));
 }
 
